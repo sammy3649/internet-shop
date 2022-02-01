@@ -1,7 +1,7 @@
 package pro.sky.java.course2.internetshop.service.impl;
 
 import org.springframework.stereotype.Service;
-import pro.sky.java.course2.internetshop.service.Basket;
+import pro.sky.java.course2.internetshop.configuration.Basket;
 import pro.sky.java.course2.internetshop.service.BasketService;
 
 import java.util.ArrayList;
@@ -17,6 +17,7 @@ public class BasketServiceimpl implements BasketService {
 
     @Override
     public void addToBasket(ArrayList<Integer> idList) {
+        basket.addItems(idList);
         for (Integer id : idList) {
             if (basket.getItems().containsKey(id)) {
                 basket.getItems().put(id, basket.getItems().get(id)+1);
@@ -29,8 +30,9 @@ public class BasketServiceimpl implements BasketService {
     }
 
     @Override
-    public Map<Integer, Integer> getToBasket() {
+    public Map<Integer, Integer> getFromBasket() {
         return null;
     }
+
 
 }

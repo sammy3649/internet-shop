@@ -13,19 +13,19 @@ import java.util.Map;
 @RequestMapping("/basket")
 
 public class BasketController {
-    private BasketService basketService;
+    private final BasketService basketService;
 
     public BasketController(BasketService basketService) {
         this.basketService = basketService;
     }
     @GetMapping("/add")
-    public void addToBasket(@RequestParam int id, ArrayList<Integer> idList) {
+    public void addToBasket(@RequestParam ArrayList<Integer> idList) {
         basketService.addToBasket(idList);
     }
 
     @GetMapping("/get")
-    public Map<Integer, Integer> getToBasket() {
-        return basketService.getToBasket();
+    public Map<Integer, Integer> getFromBasket() {
+        return basketService.getFromBasket();
     }
 
 

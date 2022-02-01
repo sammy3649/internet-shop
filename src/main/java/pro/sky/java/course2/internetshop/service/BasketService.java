@@ -6,5 +6,5 @@ import java.util.Map;
 public interface BasketService {
     void addToBasket(ArrayList<Integer> idList);
 
-    Map<Integer, Integer> getToBasket();
+    Map<Integer, Integer> getFromBasket();
 }
