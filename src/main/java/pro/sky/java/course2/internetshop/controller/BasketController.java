@@ -27,6 +27,4 @@ public class BasketController {
     public Map<Integer, Integer> getFromBasket() {
         return basketService.getFromBasket();
     }
-
-
 }

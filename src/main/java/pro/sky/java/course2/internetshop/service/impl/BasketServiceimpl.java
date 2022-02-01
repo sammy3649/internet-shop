@@ -17,21 +17,14 @@ public class BasketServiceimpl implements BasketService {
 
     @Override
     public void addToBasket(ArrayList<Integer> idList) {
-        basket.addItems(idList);
         for (Integer id : idList) {
-            if (basket.getItems().containsKey(id)) {
-                basket.getItems().put(id, basket.getItems().get(id)+1);
-                basket.getItems().put(id, 1);}
-            else {basket.getItems().put(id,1);
-            }
-
+            basket.addItems(idList);
         }
-
     }
 
     @Override
     public Map<Integer, Integer> getFromBasket() {
-        return null;
+        return basket.getItems();
     }
 
 

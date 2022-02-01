@@ -7,9 +7,12 @@ public class Basket {
     private HashMap<Integer, Integer> items;
 
     public Basket() {
+        this.items = new HashMap<>();
     }
+
     public HashMap<Integer, Integer> getItems() {
-        return items;}
+        return items;
+    }
 
     public void addItems(ArrayList<Integer> idList) {
     }
