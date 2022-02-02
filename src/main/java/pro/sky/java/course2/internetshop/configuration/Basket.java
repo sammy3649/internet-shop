@@ -15,6 +15,7 @@ public class Basket {
     }
 
     public void addItems(ArrayList<Integer> idList) {
-    }
+        for(Integer id : idList){
+            items.put(id, id + 1);
+    }}
 }
-

@@ -16,16 +16,12 @@ public class BasketServiceimpl implements BasketService {
     }
 
     @Override
-    public void addToBasket(ArrayList<Integer> idList) {
-        for (Integer id : idList) {
+    public void addToBasket(ArrayList<Integer> idList){
             basket.addItems(idList);
         }
-    }
 
     @Override
     public Map<Integer, Integer> getFromBasket() {
         return basket.getItems();
     }
-
-
 }
